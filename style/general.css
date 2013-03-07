@@ -1,0 +1,2656 @@
+    /*
+Theme Name: bollinger
+Theme URI: brwebdesign.net
+Description: Moodle Template
+Version: 1.0
+Author: Michael Soileau
+Author URI: brwebdesign.net
+Tags: Moodle template
+*/
+    
+
+#moodle-main
+{
+   background: #0F2848 url('[[pix:theme|page]]') top center fixed;
+   background: url('[[pix:theme|pageglare]]') no-repeat, linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background: url('[[pix:theme|pageglare]]') no-repeat, -webkit-linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, -webkit-linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background: url('[[pix:theme|pageglare]]') no-repeat, -moz-linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, -moz-linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background: url('[[pix:theme|pageglare]]') no-repeat, -o-linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, -o-linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background: url('[[pix:theme|pageglare]]') no-repeat, -ms-linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, -ms-linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background: url('[[pix:theme|pageglare]]') no-repeat, linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   -svg-background: url('[[pix:theme|pageglare]]') no-repeat, linear-gradient(top, rgba(24, 63, 114, 0.05) 0, rgba(24, 63, 114, 0.05) 420px, rgba(0, 0, 0, 0.04) 1050px) no-repeat, url('[[pix:theme|page]]') top center, linear-gradient(top, #102A4C 0, #102A4C 420px, #000000 1050px) no-repeat;
+   background-attachment: fixed, fixed, fixed, fixed !important;
+   margin:0 auto;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   position: relative;
+   width: 100%;
+   min-height: 100%;
+   left: 0;
+   top: 0;
+   cursor:default;
+   overflow:hidden;
+}
+table, ul.moodle-hmenu
+{
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+{
+   margin: 0;
+   padding: 0;
+}
+
+/* Reset buttons border. It's important for input and button tags. 
+ * border-collapse should be separate for shadow in IE. 
+ */
+.moodle-button
+{
+   border-collapse: separate;
+   -webkit-background-origin: border !important;
+   -moz-background-origin: border !important;
+   background-origin: border-box !important;
+   background: #B8324D;
+   background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -moz-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -o-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -ms-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   -svg-background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #90273C;
+   padding:0 5px;
+   margin:0 auto;
+   height:20px;
+}
+
+.moodle-postcontent,
+.moodle-postheadericons,
+.moodle-postfootericons,
+.moodle-blockcontent,
+ul.moodle-vmenu a 
+{
+   text-align: left;
+}
+
+.moodle-postcontent,
+.moodle-postcontent li,
+.moodle-postcontent table,
+.moodle-postcontent a,
+.moodle-postcontent a:link,
+.moodle-postcontent a:visited,
+.moodle-postcontent a.visited,
+.moodle-postcontent a:hover,
+.moodle-postcontent a.hovered
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 150%;
+}
+
+.moodle-postcontent p
+{
+   margin: 12px 0;
+}
+
+.moodle-postcontent h1, .moodle-postcontent h1 a, .moodle-postcontent h1 a:link, .moodle-postcontent h1 a:visited, .moodle-postcontent h1 a:hover,
+.moodle-postcontent h2, .moodle-postcontent h2 a, .moodle-postcontent h2 a:link, .moodle-postcontent h2 a:visited, .moodle-postcontent h2 a:hover,
+.moodle-postcontent h3, .moodle-postcontent h3 a, .moodle-postcontent h3 a:link, .moodle-postcontent h3 a:visited, .moodle-postcontent h3 a:hover,
+.moodle-postcontent h4, .moodle-postcontent h4 a, .moodle-postcontent h4 a:link, .moodle-postcontent h4 a:visited, .moodle-postcontent h4 a:hover,
+.moodle-postcontent h5, .moodle-postcontent h5 a, .moodle-postcontent h5 a:link, .moodle-postcontent h5 a:visited, .moodle-postcontent h5 a:hover,
+.moodle-postcontent h6, .moodle-postcontent h6 a, .moodle-postcontent h6 a:link, .moodle-postcontent h6 a:visited, .moodle-postcontent h6 a:hover,
+.moodle-blockheader .t, .moodle-blockheader .t a, .moodle-blockheader .t a:link, .moodle-blockheader .t a:visited, .moodle-blockheader .t a:hover,
+.moodle-vmenublockheader .t, .moodle-vmenublockheader .t a, .moodle-vmenublockheader .t a:link, .moodle-vmenublockheader .t a:visited, .moodle-vmenublockheader .t a:hover,
+.moodle-headline, .moodle-headline a, .moodle-headline a:link, .moodle-headline a:visited, .moodle-headline a:hover,
+.moodle-slogan, .moodle-slogan a, .moodle-slogan a:link, .moodle-slogan a:visited, .moodle-slogan a:hover,
+.moodle-postheader, .moodle-postheader a, .moodle-postheader a:link, .moodle-postheader a:visited, .moodle-postheader a:hover
+{
+   font-size: 22px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 120%;
+}
+
+.moodle-postcontent a, .moodle-postcontent a:link
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #BC344F;
+}
+
+.moodle-postcontent a:visited, .moodle-postcontent a.visited
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #4E8BDA;
+}
+
+.moodle-postcontent  a:hover, .moodle-postcontent a.hover
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: underline;
+   color: #BC344F;
+}
+
+.moodle-postcontent h1
+{
+   color: #65838B;
+   margin: 10px 0 0;
+   font-size: 30px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h1
+{
+   margin: 10px 0 0;
+   font-size: 30px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h1 a, .moodle-postcontent h1 a:link, .moodle-postcontent h1 a:hover, .moodle-postcontent h1 a:visited, .moodle-blockcontent h1 a, .moodle-blockcontent h1 a:link, .moodle-blockcontent h1 a:hover, .moodle-blockcontent h1 a:visited 
+{
+   font-size: 30px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h2
+{
+   color: #65838B;
+   margin: 10px 0 0;
+   font-size: 28px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h2
+{
+   margin: 10px 0 0;
+   font-size: 28px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h2 a, .moodle-postcontent h2 a:link, .moodle-postcontent h2 a:hover, .moodle-postcontent h2 a:visited, .moodle-blockcontent h2 a, .moodle-blockcontent h2 a:link, .moodle-blockcontent h2 a:hover, .moodle-blockcontent h2 a:visited 
+{
+   font-size: 28px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h3
+{
+   color: #65838B;
+   margin: 10px 0 0;
+   font-size: 26px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h3
+{
+   margin: 10px 0 0;
+   font-size: 26px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h3 a, .moodle-postcontent h3 a:link, .moodle-postcontent h3 a:hover, .moodle-postcontent h3 a:visited, .moodle-blockcontent h3 a, .moodle-blockcontent h3 a:link, .moodle-blockcontent h3 a:hover, .moodle-blockcontent h3 a:visited 
+{
+   font-size: 26px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h4
+{
+   color: #3C1019;
+   margin: 10px 0 0;
+   font-size: 18px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h4
+{
+   margin: 10px 0 0;
+   font-size: 18px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h4 a, .moodle-postcontent h4 a:link, .moodle-postcontent h4 a:hover, .moodle-postcontent h4 a:visited, .moodle-blockcontent h4 a, .moodle-blockcontent h4 a:link, .moodle-blockcontent h4 a:hover, .moodle-blockcontent h4 a:visited 
+{
+   font-size: 18px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h5
+{
+   color: #3C1019;
+   margin: 10px 0 0;
+   font-size: 15px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h5
+{
+   margin: 10px 0 0;
+   font-size: 15px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h5 a, .moodle-postcontent h5 a:link, .moodle-postcontent h5 a:hover, .moodle-postcontent h5 a:visited, .moodle-blockcontent h5 a, .moodle-blockcontent h5 a:link, .moodle-blockcontent h5 a:hover, .moodle-blockcontent h5 a:visited 
+{
+   font-size: 15px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h6
+{
+   color: #90273C;
+   margin: 10px 0 0;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent h6
+{
+   margin: 10px 0 0;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-postcontent h6 a, .moodle-postcontent h6 a:link, .moodle-postcontent h6 a:hover, .moodle-postcontent h6 a:visited, .moodle-blockcontent h6 a, .moodle-blockcontent h6 a:link, .moodle-blockcontent h6 a:hover, .moodle-blockcontent h6 a:visited 
+{
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+header, footer, article, nav, #moodle-hmenu-bg, .moodle-sheet, .moodle-hmenu a, .moodle-vmenu a, .moodle-slidenavigator > a, .moodle-checkbox:before, .moodle-radiobutton:before
+{
+   -webkit-background-origin: border !important;
+   -moz-background-origin: border !important;
+   background-origin: border-box !important;
+}
+
+header, footer, article, nav, #moodle-hmenu-bg, .moodle-sheet, .moodle-slidenavigator > a, .moodle-checkbox:before, .moodle-radiobutton:before
+{
+   display: block;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+ul
+{
+   list-style-type: none;
+}
+
+ol
+{
+   list-style-position: inside;
+}
+
+html, body
+{
+   height: 100%;
+}
+
+body
+{
+   padding: 0;
+   margin:0;
+   min-width: 700px;
+   color: #3C1019;
+}
+
+.clearfix:before, .clearfix:after {
+   content: "";
+   display: table;
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+.cleared {
+   font: 0/0 serif;
+   clear: both;
+}
+
+form
+{
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+table.position
+{
+   position: relative;
+   width: 100%;
+   table-layout: fixed;
+}
+
+li h1, .moodle-postcontent li h1, .moodle-blockcontent li h1 
+{
+   margin:1px;
+} 
+li h2, .moodle-postcontent li h2, .moodle-blockcontent li h2 
+{
+   margin:1px;
+} 
+li h3, .moodle-postcontent li h3, .moodle-blockcontent li h3 
+{
+   margin:1px;
+} 
+li h4, .moodle-postcontent li h4, .moodle-blockcontent li h4 
+{
+   margin:1px;
+} 
+li h5, .moodle-postcontent li h5, .moodle-blockcontent li h5 
+{
+   margin:1px;
+} 
+li h6, .moodle-postcontent li h6, .moodle-blockcontent li h6 
+{
+   margin:1px;
+} 
+li p, .moodle-postcontent li p, .moodle-blockcontent li p 
+{
+   margin:1px;
+}
+
+
+.moodle-shapes
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 0;
+}
+
+.moodle-slider-inner {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+}
+
+.moodle-slidenavigator > a {
+   display: inline-block;
+   vertical-align: middle;
+   outline-style: none;
+   font-size: 1px;
+}
+
+.moodle-slidenavigator > a:last-child {
+   margin-right: 0 !important;
+}
+
+
+
+
+
+.moodle-footer .layout-item-0 { padding: 5px;  }
+.ie7 .post .layout-cell {border:none !important; padding:0 !important; }
+.ie6 .post .layout-cell {border:none !important; padding:0 !important; }
+
+.moodle-sheet
+{
+   background: #FFFFFF;
+   margin:5px auto 0;
+   position:relative;
+   cursor:auto;
+   width: 90%;
+   min-width: 700px;
+   max-width: 1728px;
+   z-index: auto !important;
+}
+
+.moodle-header
+{
+   margin:0 auto;
+   height: 500px;
+   background-image: url('[[pix:theme|header]]');
+   background-position: center top;
+   background-repeat: no-repeat;
+   position: relative;
+   z-index: auto !important;
+}
+
+.responsive .moodle-header 
+{
+   background-image: url('[[pix:theme|header]]');
+   background-position: center center;
+}
+
+.moodle-header>.widget 
+{
+   position:absolute;
+   z-index:101;
+}
+
+.moodle-nav
+{
+   background: #000000;
+   background: linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   background: linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(32, 42, 44, 0.8) 0, rgba(51, 67, 71, 0.8) 50%, rgba(28, 36, 38, 0.8) 50%, rgba(45, 58, 62, 0.8) 100%) no-repeat;
+   border-bottom:1px solid rgba(169, 188, 193, 0.2);
+   padding:3px;
+   margin:0 auto;
+   position: relative;
+   z-index: 100;
+   font-size: 0;
+   text-align: left;
+}
+
+ul.moodle-hmenu a, ul.moodle-hmenu a:link, ul.moodle-hmenu a:visited, ul.moodle-hmenu a:hover 
+{
+   outline: none;
+   position: relative;
+   z-index: 11;
+}
+
+ul.moodle-hmenu, ul.moodle-hmenu ul
+{
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   list-style-type: none;
+}
+
+ul.moodle-hmenu li
+{
+   position: relative;
+   z-index: 5;
+   display: block;
+   float: left;
+   background: none;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+ul.moodle-hmenu li:hover
+{
+   z-index: 10000;
+   white-space: normal;
+}
+
+ul.moodle-hmenu:after, ul.moodle-hmenu ul:after
+{
+   content: ".";
+   height: 0;
+   display: block;
+   visibility: hidden;
+   overflow: hidden;
+   clear: both;
+}
+
+ul.moodle-hmenu, ul.moodle-hmenu ul 
+{
+   min-height: 0;
+}
+
+ul.moodle-hmenu 
+{
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.moodle-nav:before 
+{
+   content:' ';
+}
+
+.moodle-hmenu-extra1
+{
+   position: relative;
+   display: block;
+   float: left;
+   width: auto;
+   height: auto;
+   background-position: center;
+}
+
+.moodle-hmenu-extra2
+{
+   position: relative;
+   display: block;
+   float: right;
+   width: auto;
+   height: auto;
+   background-position: center;
+}
+
+.moodle-hmenu
+{
+   float: left;
+}
+
+.moodle-menuitemcontainer
+{
+   margin:0 auto;
+}
+ul.moodle-hmenu>li {
+   margin-left: 11px;
+}
+ul.moodle-hmenu>li:first-child {
+   margin-left: 5px;
+}
+ul.moodle-hmenu>li:last-child, ul.moodle-hmenu>li.last-child {
+   margin-right: 5px;
+}
+
+ul.moodle-hmenu>li>a
+{
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   padding:0 28px;
+   margin:0 auto;
+   position: relative;
+   display: block;
+   height: 51px;
+   cursor: pointer;
+   text-decoration: none;
+   color: #97AEB4;
+   line-height: 51px;
+   text-align: center;
+}
+
+.moodle-hmenu a, 
+.moodle-hmenu a:link, 
+.moodle-hmenu a:visited, 
+.moodle-hmenu a.active, 
+.moodle-hmenu a:hover
+{
+   font-size: 16px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   text-align: left;
+}
+
+ul.moodle-hmenu>li>a.active
+{
+   background: #9C2B41;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   padding:0 28px;
+   margin:0 auto;
+   color: #000000;
+   text-decoration: none;
+}
+
+ul.moodle-hmenu>li>a:visited, 
+ul.moodle-hmenu>li>a:hover, 
+ul.moodle-hmenu>li:hover>a {
+   text-decoration: none;
+}
+
+ul.moodle-hmenu>li>a:hover, .desktop ul.moodle-hmenu>li:hover>a
+{
+   background: #2869BD;
+   background: rgba(40, 105, 189, 0.8);
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   padding:0 28px;
+   margin:0 auto;
+}
+ul.moodle-hmenu>li>a:hover, 
+.desktop-nav ul.moodle-hmenu>li:hover>a {
+   color: #F5DBE0;
+   text-decoration: none;
+}
+
+ul.moodle-hmenu>li:before
+{
+   position:absolute;
+   display: block;
+   content:' ';
+   top:0;
+   left:  -11px;
+   width:11px;
+   height: 51px;
+   background: url('[[pix:theme|menuseparator]]') center center no-repeat;
+}
+ul.moodle-hmenu>li:first-child:before{
+   display:none;
+}
+
+ul.moodle-hmenu li li a
+{
+   background: #2869BD;
+   background: transparent;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   padding:0 22px;
+   margin:0 auto;
+}
+ul.moodle-hmenu li li 
+{
+   float: none;
+   width: auto;
+   margin-top: 2px;
+   margin-bottom: 2px;
+}
+
+.desktop-nav ul.moodle-hmenu li li ul>li:first-child 
+{
+   margin-top: 0;
+}
+
+ul.moodle-hmenu li li ul>li:last-child 
+{
+   margin-bottom: 0;
+}
+
+.moodle-hmenu ul a
+{
+   display: block;
+   white-space: nowrap;
+   height: 33px;
+   min-width: 7em;
+   border: 0 solid transparent;
+   text-align: left;
+   line-height: 33px;
+   color: #D9E1E3;
+   font-size: 16px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   margin:0;
+}
+
+.moodle-hmenu ul a:link, 
+.moodle-hmenu ul a:visited, 
+.moodle-hmenu ul a.active, 
+.moodle-hmenu ul a:hover
+{
+   text-align: left;
+   line-height: 33px;
+   color: #D9E1E3;
+   font-size: 16px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   margin:0;
+}
+
+ul.moodle-hmenu ul li a:hover, .desktop ul.moodle-hmenu ul li:hover>a
+{
+   background: #4282D7;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   margin:0 auto;
+}
+.moodle-hmenu ul a:hover
+{
+   text-decoration: none;
+}
+
+.moodle-hmenu ul li a:hover
+{
+   color: #000000;
+}
+
+.desktop-nav .moodle-hmenu ul li:hover>a
+{
+   color: #000000;
+}
+
+ul.moodle-hmenu ul:before
+{
+   background: #42565C;
+   background: rgba(66, 86, 92, 0.9);
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   border:1px solid rgba(140, 165, 171, 0.2);
+   margin:0 auto;
+   display: block;
+   position: absolute;
+   content: ' ';
+   z-index: 1;
+}
+.desktop-nav ul.moodle-hmenu li:hover>ul {
+   visibility: visible;
+   top: 100%;
+}
+.desktop-nav ul.moodle-hmenu li li:hover>ul {
+   top: 0;
+   left: 100%;
+}
+
+ul.moodle-hmenu ul
+{
+   visibility: hidden;
+   position: absolute;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   background-image: url('[[pix:theme|spacer]]');
+}
+
+.desktop-nav ul.moodle-hmenu>li>ul
+{
+   padding: 15px 35px 35px 35px;
+   margin: -10px 0 0 -30px;
+}
+
+.desktop-nav ul.moodle-hmenu ul ul
+{
+   padding: 35px 35px 35px 17px;
+   margin: -35px 0 0 -6px;
+}
+
+.desktop-nav ul.moodle-hmenu ul.moodle-hmenu-left-to-right 
+{
+   right: auto;
+   left: 0;
+   margin: -10px 0 0 -30px;
+}
+
+.desktop-nav ul.moodle-hmenu ul.moodle-hmenu-right-to-left 
+{
+   left: auto;
+   right: 0;
+   margin: -10px -30px 0 0;
+}
+
+.desktop-nav ul.moodle-hmenu li li:hover>ul.moodle-hmenu-left-to-right {
+   right: auto;
+   left: 100%;
+}
+.desktop-nav ul.moodle-hmenu li li:hover>ul.moodle-hmenu-right-to-left {
+   left: auto;
+   right: 100%;
+}
+
+.desktop-nav ul.moodle-hmenu ul ul.moodle-hmenu-left-to-right
+{
+   right: auto;
+   left: 0;
+   padding: 35px 35px 35px 17px;
+   margin: -35px 0 0 -6px;
+}
+
+.desktop-nav ul.moodle-hmenu ul ul.moodle-hmenu-right-to-left
+{
+   left: auto;
+   right: 0;
+   padding: 35px 17px 35px 35px;
+   margin: -35px -6px 0 0;
+}
+
+.desktop-nav ul.moodle-hmenu li ul>li:first-child {
+   margin-top: 0;
+}
+.desktop-nav ul.moodle-hmenu li ul>li:last-child {
+   margin-bottom: 0;
+}
+
+.desktop-nav ul.moodle-hmenu ul ul:before
+{
+   border-radius: 10px;
+   top: 30px;
+   bottom: 30px;
+   right: 30px;
+   left: 12px;
+}
+
+.desktop-nav ul.moodle-hmenu>li>ul:before
+{
+   top: 10px;
+   right: 30px;
+   bottom: 30px;
+   left: 30px;
+}
+
+.desktop-nav ul.moodle-hmenu>li>ul.moodle-hmenu-left-to-right:before {
+   right: 30px;
+   left: 30px;
+}
+.desktop-nav ul.moodle-hmenu>li>ul.moodle-hmenu-right-to-left:before {
+   right: 30px;
+   left: 30px;
+}
+.desktop-nav ul.moodle-hmenu ul ul.moodle-hmenu-left-to-right:before {
+   right: 30px;
+   left: 12px;
+}
+.desktop-nav ul.moodle-hmenu ul ul.moodle-hmenu-right-to-left:before {
+   right: 12px;
+   left: 30px;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext>a
+{
+   white-space: nowrap;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext>a:hover,
+.desktop-nav ul.moodle-hmenu>li.ext:hover>a,
+.desktop-nav ul.moodle-hmenu>li.ext:hover>a.active  
+{
+   background: none;
+   /* default padding + border size */
+  padding: 0 28px 0 28px;
+   /* margin for shadow */
+  margin: -0 -0 0 -0;
+   overflow: hidden;
+   position: relative;
+   border: none;
+   border-radius: 0;
+   box-shadow: none;
+   color: #E4EAEC;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext>a:hover:before,
+.desktop-nav ul.moodle-hmenu>li.ext:hover>a:before,
+.desktop-nav ul.moodle-hmenu>li.ext:hover>a.active:before  
+{
+   position: absolute;
+   content: ' ';
+   /* top, right, left - for shadow */
+  top: 0;
+   right: 0;
+   left: 0;
+   /* border + shadow */
+  bottom: -1px;
+   background-color: rgba(66, 86, 92, 0.9);
+   border: 1px Solid rgba(140, 165, 171, 0.2);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+   z-index: -1;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>ul 
+{
+   padding-top: 4px;
+   /* menu bar padding */
+  margin-top: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>ul:before 
+{
+   /* border + shadow */
+  top: -1px;
+   clip: rect(12px, auto, auto, auto);
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+ul.moodle-hmenu>li.ext>.ext-r,
+ul.moodle-hmenu>li.ext>.ext-l,
+ul.moodle-hmenu>li.ext>.ext-m,
+ul.moodle-hmenu>li.ext>.ext-off
+{
+   display: none;
+   z-index: 12;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext>ul 
+{
+   z-index: 13;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-r:hover>.ext-r,
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l:hover>.ext-l
+{
+   position: absolute;
+   display: block;
+   overflow: hidden;
+   /* size of radius 
+   * if size if 0 we should now generate script 
+   * that adds ext-r and ext-m divs
+   */
+  height: 12px;
+   top: 100%;
+   padding-top: 1px;
+   margin-top: -1px;
+/* border width + shadow */}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-r:before,
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-l:before
+{
+   position: absolute;
+   content: ' ';
+   top: 0;
+   /* border + shadow */
+  bottom: -1px;
+   background-color: rgba(66, 86, 92, 0.9);
+   border: 1px Solid rgba(140, 165, 171, 0.2);
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-r:hover>.ext-r
+{
+   left: 100%;
+   right: auto;
+   padding-left: 0;
+   margin-left: 0;
+   padding-right: 1px;
+   margin-right: -1px;
+/* only shadow */}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-r:hover>.ext-r:before
+{
+   right: 0;
+   left: -1px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 10px;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l:hover>.ext-l
+{
+   right: 100%;
+   left: auto;
+   padding-right: 0;
+   margin-right: 0;
+   padding-left: 1px;
+   margin-left: -1px;
+/* only shadow */}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l:hover>.ext-l:before
+{
+   right: -1px;
+   left: 0;
+   border-top-right-radius: 0;
+   border-top-left-radius: 10px;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-m, 
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-off 
+{
+   position: absolute;
+   display: block;
+   overflow: hidden;
+   height: 11px;
+   top: 100%;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-r:hover>.ext-m 
+{
+   /* shadow offset */
+  left: -0;
+   right: 0;
+   /* shadow offset */
+  padding-right: 0;
+   padding-left: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-off 
+{
+   /* shadow offset */
+  left: -0;
+   right: -0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l:hover>.ext-m
+{
+   /* shadow offset */
+  right: -0;
+   left: 0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l.ext-r:hover>.ext-m
+{
+   /* shadow offset */
+  right: -0;
+   left: -0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-m:before, 
+.desktop-nav ul.moodle-hmenu>li.ext:hover>.ext-off:before 
+{
+   position: absolute;
+   content: ' ';
+   top: -1px;
+   bottom: -1px;
+   /* shadow offset */
+  background-color: rgba(66, 86, 92, 0.9);
+   border: 1px Solid rgba(140, 165, 171, 0.2);
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-r:hover>.ext-m:before
+{
+   right: -1px;
+   left: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l:hover>.ext-m:before
+{
+   left: -1px;
+   right: 0;
+}
+
+.desktop-nav ul.moodle-hmenu>li.ext.ext-l.ext-r:hover>.ext-m:before
+{
+   left: -1px;
+   right: -1px
+;
+}
+
+.moodle-layout-wrapper
+{
+   position: relative;
+   margin: 10px auto 0 auto;
+   z-index: auto !important;
+}
+
+.moodle-content-layout
+{
+   display: table;
+   width: 100%;
+   table-layout: fixed;
+   border-collapse: collapse;
+}
+
+.moodle-content-layout-row 
+{
+   display: table-row;
+}
+
+.moodle-layout-cell
+{
+   display: table-cell;
+   vertical-align: top;
+}
+
+.moodle-breadcrumbs
+{
+   margin:0 auto;
+}
+
+a.moodle-button,
+a.moodle-button:link,
+a:link.moodle-button:link,
+body a.moodle-button:link,
+a.moodle-button:visited,
+body a.moodle-button:visited,
+input.moodle-button,
+button.moodle-button
+{
+   text-decoration: none;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   position:relative;
+   display: inline-block;
+   vertical-align: middle;
+   white-space: nowrap;
+   text-align: center;
+   color: #D3DCDF;
+   margin: 0 !important;
+   overflow: visible;
+   cursor: pointer;
+   text-indent: 0;
+   line-height: 20px;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+}
+
+.moodle-button img
+{
+   margin: 0;
+   vertical-align: middle;
+}
+
+.firefox2 .moodle-button
+{
+   display: block;
+   float: left;
+}
+
+input, select, textarea
+{
+   vertical-align: middle;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.moodle-block select 
+{
+   width:96%;
+}
+
+input.moodle-button
+{
+   float: none !important;
+}
+
+.moodle-button.active, .moodle-button.active:hover
+{
+   background: #173D6D;
+   background: linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   background: -moz-linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   background: -o-linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   background: -ms-linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   background: linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   -svg-background: linear-gradient(top, #153661 0, #1D4B87 50%, #133158 50%, #1A447A 100%) no-repeat;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #B8324D;
+   padding:0 5px;
+   margin:0 auto;
+}
+.moodle-button.active, .moodle-button.active:hover {
+   color: #EFC3CC !important;
+}
+
+.moodle-button.hover, .moodle-button:hover
+{
+   background: #205497;
+   background: linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   background: -moz-linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   background: -o-linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   background: -ms-linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   background: linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   -svg-background: linear-gradient(top, #1D4D8B 0, #2562B1 50%, #1C4882 50%, #235BA4 100%) no-repeat;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #173D6D;
+   padding:0 5px;
+   margin:0 auto;
+}
+.moodle-button.hover, .moodle-button:hover {
+   color: #A2C2EB !important;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+{
+   background: #FFFFFF;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   border:1px solid #A9BCC1;
+   margin:0 auto;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+{
+   width: 100%;
+   padding: 6px 0;
+   color: #40121B !important;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+input.moodle-error, textarea.moodle-error
+{
+   background: #FFFFFF;
+   border:1px solid #E2341D;
+   margin:0 auto;
+}
+input.moodle-error, textarea.moodle-error {
+   color: #40121B !important;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+form.moodle-search input[type="text"]
+{
+   background: #FFFFFF;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   border:1px solid #A9BCC1;
+   margin:0 auto;
+   width: 100%;
+   padding: 6px 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   color: #40121B !important;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+form.moodle-search 
+{
+   background-image: none;
+   border: 0;
+   display:block;
+   position:relative;
+   top:0;
+   padding:0;
+   margin:5px;
+   left:0;
+   line-height: 0;
+}
+
+form.moodle-search input
+{
+   top:0;
+   right:0;
+}
+
+form.moodle-search>input {
+   bottom:0;
+   left:0;
+   vertical-align: middle;
+}
+ 
+form.moodle-search input[type="submit"]
+{
+   margin:0 auto;
+   color: #D3DCDF !important;
+   position:absolute;
+   display:block;
+   left: auto;
+   border:none;
+   background:url('[[pix:theme|searchicon]]') center center no-repeat;
+   width:24px;
+   height: 100%;
+   padding:0;
+}
+
+label.moodle-checkbox:before
+{
+   background: #FFFFFF;
+   background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -moz-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -o-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -ms-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   -svg-background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   -webkit-border-radius:5px;
+   -moz-border-radius:5px;
+   border-radius:5px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #6E8D96;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+}
+label.moodle-checkbox
+{
+   cursor: pointer;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 20px;
+   display: inline-block;
+}
+
+.moodle-checkbox>input[type="checkbox"]
+{
+   margin: 0 5px 0 0;
+}
+
+label.moodle-checkbox.active:before
+{
+   background: #D97387;
+   background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -moz-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -o-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -ms-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   -svg-background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   -webkit-border-radius:5px;
+   -moz-border-radius:5px;
+   border-radius:5px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #B8324D;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+   display: inline-block;
+}
+
+label.moodle-checkbox.hovered:before
+{
+   background: #E7A7B4;
+   background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -moz-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -o-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -ms-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   -svg-background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   -webkit-border-radius:5px;
+   -moz-border-radius:5px;
+   border-radius:5px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #2869BD;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+   display: inline-block;
+}
+
+label.moodle-radiobutton:before
+{
+   background: #FFFFFF;
+   background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -moz-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -o-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: -ms-linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   -svg-background: linear-gradient(top, #F3F6F6 0, #DEE5E7 40%, #DCE3E5 50%, #DEE5E7 60%, #F3F6F6 100%) no-repeat;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #173D6D;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+}
+label.moodle-radiobutton
+{
+   cursor: pointer;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 20px;
+   display: inline-block;
+}
+
+.moodle-radiobutton>input[type="radio"]
+{
+   vertical-align: baseline;
+   margin: 0 5px 0 0;
+}
+
+label.moodle-radiobutton.active:before
+{
+   background: #D97387;
+   background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -moz-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -o-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: -ms-linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   -svg-background: linear-gradient(top, #DD8395 0, #D86F84 40%, #D66B80 50%, #D86F84 60%, #DD8395 100%) no-repeat;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #B8324D;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+   display: inline-block;
+}
+
+label.moodle-radiobutton.hovered:before
+{
+   background: #E7A7B4;
+   background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -moz-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -o-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: -ms-linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   -svg-background: linear-gradient(top, #EBB7C1 0, #E59FAD 40%, #E49BA9 50%, #E59FAD 60%, #EBB7C1 100%) no-repeat;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+   -webkit-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.25);
+   border:1px solid #2869BD;
+   margin:0 auto;
+   width:20px;
+   height:20px;
+   display: inline-block;
+}
+
+.moodle-block
+{
+   margin:3px;
+}
+div.moodle-block img
+{
+   border: none;
+   margin: 0;
+}
+
+.moodle-blockheader
+{
+   padding:12px 7px;
+   margin:0 auto;
+}
+.moodle-blockheader .t,
+.moodle-blockheader .t a,
+.moodle-blockheader .t a:link,
+.moodle-blockheader .t a:visited, 
+.moodle-blockheader .t a:hover
+{
+   color: #36464A;
+   font-size: 20px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   margin: 0 5px;
+}
+
+.moodle-blockheader .t:before
+{
+   content:url('[[pix:theme|blockheadericon]]');
+   margin-right:6px;
+   bottom: 3px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .moodle-blockheader .t:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-blockcontent
+{
+   background: #C7D3D6;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   padding:7px;
+   margin:0 auto;
+   color: #2C0C12;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+.moodle-blockcontent table,
+.moodle-blockcontent li, 
+.moodle-blockcontent a,
+.moodle-blockcontent a:link,
+.moodle-blockcontent a:visited,
+.moodle-blockcontent a:hover
+{
+   color: #2C0C12;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+
+.moodle-blockcontent p
+{
+   margin: 0 5px;
+}
+
+.moodle-blockcontent a, .moodle-blockcontent a:link
+{
+   color: #802336;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.moodle-blockcontent a:visited, .moodle-blockcontent a.visited
+{
+   color: #0C213B;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.moodle-blockcontent a:hover, .moodle-blockcontent a.hover
+{
+   color: #A42D45;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+.moodle-block ul>li:before
+{
+   content:url('[[pix:theme|blockbullets]]');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   margin-left: -14px;
+}
+.opera .moodle-block ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-block li
+{
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+   color: #0A1A2E;
+   margin: 5px 0 0 10px;
+}
+
+.moodle-block ul>li, .moodle-block ol
+{
+   padding: 0;
+}
+
+.moodle-block ul>li
+{
+   padding-left: 14px;
+}
+
+.moodle-post
+{
+   background: #DEE5E7;
+   background: rgba(222, 229, 231, 0.5);
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   padding:5px;
+   margin:3px;
+}
+a img
+{
+   border: 0;
+}
+
+.moodle-article img, img.moodle-article, .moodle-block img, .moodle-footer img
+{
+   margin: 7px 7px 7px 7px;
+}
+
+.moodle-metadata-icons img
+{
+   border: none;
+   vertical-align: middle;
+   margin: 2px;
+}
+
+.moodle-article table, table.moodle-article
+{
+   border-collapse: collapse;
+   margin: 1px;
+}
+
+.moodle-post .moodle-content-layout-br
+{
+   height: 0;
+}
+
+.moodle-article th, .moodle-article td
+{
+   padding: 2px;
+   border: solid 1px #8CA5AB;
+   vertical-align: top;
+   text-align: left;
+}
+
+.moodle-article th
+{
+   text-align: center;
+   vertical-align: middle;
+   padding: 7px;
+}
+
+pre
+{
+   overflow: auto;
+   padding: 0.1em;
+}
+
+.preview-cms-logo
+{
+   border: 0;
+   margin: 1em 1em 0 0;
+   float: left;
+}
+
+.image-caption-wrapper
+{
+   padding: 7px 7px 7px 7px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper img
+{
+   margin: 0 !important;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper div.moodle-collage
+{
+   margin: 0 !important;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper p
+{
+   font-size: 80%;
+   text-align: right;
+   margin: 0;
+}
+
+.moodle-postmetadataheader
+{
+  
+   margin:0 auto;
+   position:relative;
+   z-index:1;
+   padding: 1px;
+}
+
+.moodle-postheadericon:before
+{
+   content:url('[[pix:theme|postheadericon]]');
+   margin-right:6px;
+   bottom: 3px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .moodle-postheadericon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postheader
+{
+   color: #40121B;
+   margin: 5px 10px;
+   font-size: 24px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.moodle-postheader a, 
+.moodle-postheader a:link, 
+.moodle-postheader a:visited,
+.moodle-postheader a.visited,
+.moodle-postheader a:hover,
+.moodle-postheader a.hovered
+{
+   font-size: 24px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.moodle-postheader a, .moodle-postheader a:link
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #681D2C;
+}
+
+.moodle-postheader a:visited, .moodle-postheader a.visited
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #1D4D8B;
+}
+
+.moodle-postheader a:hover,  .moodle-postheader a.hovered
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #7C2234;
+}
+
+.moodle-postheadericons,
+.moodle-postheadericons a,
+.moodle-postheadericons a:link,
+.moodle-postheadericons a:visited,
+.moodle-postheadericons a:hover
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #222C2F;
+}
+
+.moodle-postheadericons
+{
+   display:inline-block;
+   padding: 1px;
+}
+
+.moodle-postheadericons a, .moodle-postheadericons a:link
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #38484D;
+}
+
+.moodle-postheadericons a:visited, .moodle-postheadericons a.visited
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-decoration: none;
+   color: #38484D;
+}
+
+.moodle-postheadericons a:hover, .moodle-postheadericons a.hover
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-decoration: underline;
+   color: #071322;
+}
+
+.moodle-postdateicon:before
+{
+   content:url('[[pix:theme|postdateicon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postdateicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postauthoricon:before
+{
+   content:url('[[pix:theme|postauthoricon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postauthoricon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postpdficon:before
+{
+   content:url('[[pix:theme|postpdficon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postpdficon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postprinticon:before
+{
+   content:url('[[pix:theme|postprinticon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postprinticon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postemailicon:before
+{
+   content:url('[[pix:theme|postemailicon]]');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .moodle-postemailicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postediticon:before
+{
+   content:url('[[pix:theme|postediticon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postediticon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postcontent ul>li:before,  .moodle-post ul>li:before,  .moodle-textblock ul>li:before
+{
+   content:url('[[pix:theme|postbullets]]');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .moodle-postcontent ul>li:before, .opera   .moodle-post ul>li:before, .opera   .moodle-textblock ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postcontent li, .moodle-post li, .moodle-textblock li
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #0F1315;
+   margin: 3px 0 0 11px;
+}
+
+.moodle-postcontent ul>li, .moodle-post ul>li, .moodle-textblock ul>li, .moodle-postcontent ol, .moodle-post ol, .moodle-textblock ol
+{
+   padding: 0;
+}
+
+.moodle-postcontent ul>li, .moodle-post ul>li, .moodle-textblock ul>li
+{
+   padding-left: 14px;
+}
+
+.moodle-postcontent ul>li:before,  .moodle-post ul>li:before,  .moodle-textblock ul>li:before
+{
+   margin-left: -14px;
+}
+
+.moodle-postcontent ol, .moodle-post ol, .moodle-textblock ol, .moodle-postcontent ul, .moodle-post ul, .moodle-textblock ul
+{
+   margin: 1em 0 1em 11px;
+}
+
+.moodle-postcontent li ol, .moodle-post li ol, .moodle-textblock li ol, .moodle-postcontent li ul, .moodle-post li ul, .moodle-textblock li ul
+{
+   margin: 0.5em 0 0.5em 11px;
+}
+
+.moodle-postcontent li, .moodle-post li, .moodle-textblock li
+{
+   margin: 3px 0 0 0;
+}
+
+.moodle-postcontent ol>li, .moodle-post ol>li, .moodle-textblock ol>li
+{
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+
+.moodle-postcontent ul>li, .moodle-post ul>li, .moodle-textblock ul>li
+{
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+blockquote
+{
+   background: #E7A7B4 url('[[pix:theme|postquote]]') no-repeat scroll;
+   border:1px solid #689BDF;
+   padding:6px 6px 6px 30px;
+   margin:0 0 0 20px;
+   color: #040C15;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-align: left;
+   /* makes block not to align behind the image if they are in the same line */
+  overflow: auto;
+   clear:both;
+}
+blockquote a, .moodle-postcontent blockquote a, .moodle-blockcontent blockquote a, .moodle-footer blockquote a,
+blockquote a:link, .moodle-postcontent blockquote a:link, .moodle-blockcontent blockquote a:link, .moodle-footer blockquote a:link,
+blockquote a:visited, .moodle-postcontent blockquote a:visited, .moodle-blockcontent blockquote a:visited, .moodle-footer blockquote a:visited,
+blockquote a:hover, .moodle-postcontent blockquote a:hover, .moodle-blockcontent blockquote a:hover, .moodle-footer blockquote a:hover
+{
+   color: #040C15;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-align: left;
+}
+
+/* Override native 'p' margins*/
+blockquote p,
+.moodle-postcontent blockquote p,
+.moodle-blockcontent blockquote p,
+.moodle-footer blockquote p
+{
+   margin: 0;
+   margin: 5px 0;
+}
+
+.moodle-postmetadatafooter
+{
+   background: #A9BCC1;
+   background: rgba(169, 188, 193, 0.6);
+   border:1px solid #8CA5AB;
+   margin:0 auto;
+   position:relative;
+   z-index:1;
+   padding: 1px;
+}
+
+.moodle-postfootericons,
+.moodle-postfootericons a,
+.moodle-postfootericons a:link,
+.moodle-postfootericons a:visited,
+.moodle-postfootericons a:hover
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #242F32;
+}
+
+.moodle-postfootericons
+{
+   display:inline-block;
+   padding: 1px;
+}
+
+.moodle-postfootericons a, .moodle-postfootericons a:link
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #3A4B50;
+}
+
+.moodle-postfootericons a:visited, .moodle-postfootericons a.visited
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #3A4B50;
+}
+
+.moodle-postfootericons a:hover, .moodle-postfootericons a.hover
+{
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #081526;
+}
+
+.moodle-postcategoryicon:before
+{
+   content:url('[[pix:theme|postcategoryicon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postcategoryicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-posttagicon:before
+{
+   content:url('[[pix:theme|posttagicon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-posttagicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-postcommentsicon:before
+{
+   content:url('[[pix:theme|postcommentsicon]]');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .moodle-postcommentsicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-footer
+{
+   background: #C7D3D6;
+   border-top:1px solid #A9BCC1;
+   padding:20px;
+   margin:0 auto;
+   position: relative;
+   color: #181F21;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+   text-align: center;
+}
+
+.moodle-footer a,
+.moodle-footer a:link,
+.moodle-footer a:visited,
+.moodle-footer a:hover,
+.moodle-footer td, 
+.moodle-footer th,
+.moodle-footer caption
+{
+   color: #181F21;
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+
+.moodle-footer p 
+{
+   padding:0;
+   text-align: center;
+}
+
+.moodle-footer a,
+.moodle-footer a:link
+{
+   color: #802336;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.moodle-footer a:visited
+{
+   color: #45595F;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.moodle-footer a:hover
+{
+   color: #A42D45;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: underline;
+}
+
+.moodle-footer img
+{
+   border: none;
+   margin: 0;
+}
+
+.moodle-rss-tag-icon
+{
+   background:  url('[[pix:theme|footerrssicon]]') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+}
+
+.moodle-rss-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.moodle-footer ul>li:before
+{
+   content:url('[[pix:theme|footerbullets]]');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   margin-left: -17px;
+}
+.opera .moodle-footer ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.moodle-footer li
+{
+   font-size: 13px;
+   font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #2C0C12;
+}
+
+.moodle-footer ul>li, .moodle-footer ol
+{
+   padding: 0;
+}
+
+.moodle-footer ul>li
+{
+   padding-left: 17px;
+}
+
+.moodle-page-footer, 
+.moodle-page-footer a,
+.moodle-page-footer a:link,
+.moodle-page-footer a:visited,
+.moodle-page-footer a:hover
+{
+   font-family: Arial;
+   font-size: 10px;
+   letter-spacing: normal;
+   word-spacing: normal;
+   font-style: normal;
+   font-weight: normal;
+   text-decoration: underline;
+   color: #EDBFC8;
+}
+
+.moodle-page-footer
+{
+   position: relative;
+   z-index: auto !important;
+   padding: 1em;
+   text-align: center !important;
+   text-decoration: none;
+   color: #B8C7CC;
+}
+
+img.moodle-lightbox
+{
+   cursor: pointer;
+}
+
+#moodle-lightbox-bg *
+{
+   padding: 0;
+   margin: 0;
+}
+
+div#moodle-lightbox-bg
+{
+   top: 0;
+   left: 0;
+   width: 100%;
+   position: absolute;
+   height: 100%;
+   background-color: #000;
+   opacity: 0.8;
+   filter: alpha(opacity=80);
+   z-index: 9999;
+}
+
+img.moodle-lightbox-image
+{
+   -webkit-transition: opacity 350ms ease-in-out;
+   -moz-transition: opacity 350ms ease-in-out;
+   -o-transition: opacity 350ms ease-in-out;
+   -ms-transition: opacity 350ms ease-in-out;
+   transition: opacity 350ms ease-in-out;
+   cursor: pointer;
+   z-index: 10000;
+   position: fixed;
+   border: 6px solid #fff;
+   border-radius: 3px;
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+
+img.moodle-lightbox-image.active
+{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.lightbox-error
+{
+   position: fixed;
+   background: #fff;
+   z-index: 100;
+   opacity: 0.95;
+   padding: 20px;
+   border: 1px solid #b4b4b4;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px #333;
+   width: 300px;
+   height: 80px;
+}
+
+.loading
+{
+   position: fixed;
+   background: #fff url('[[pix:theme|preloader-01]]') center center no-repeat;
+   width: 32px;
+   height: 32px;
+   z-index: 10100;
+   opacity: 0.5;
+   padding: 10px;
+   border: 1px solid #b4b4b4;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px #333;
+}
+
+.arrow
+{
+   height: 100px;
+   width: 82px;
+   z-index: 10003;
+   position: fixed;
+   cursor: pointer;
+   opacity: 0.5;
+   filter: alpha(opacity=50);
+}
+
+.arrow.left
+{
+   left: 9px;
+}
+.arrow.right
+{
+   right: 9px;
+}
+
+.arrow:hover
+{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.arrow.disabled 
+{
+   display: none;
+}
+
+.arrow-t, .arrow-b
+{
+   height: 6px;
+   width: 30px;
+   left: 26px;
+   background-color: #fff;
+   position: relative;
+   border-radius: 3px;
+}
+
+.arrow-t
+{
+   top: 38px;
+}
+
+.arrow-b
+{
+   top: 50px;
+}
+
+.close
+{
+   width: 22px;
+   height: 22px;
+   position: fixed;
+   top: 30px;
+   right: 39px;
+   cursor: pointer;
+   opacity: 0.5;
+   filter: alpha(opacity=50);
+}
+
+.close:hover 
+{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.close .cw, .close .ccw
+{
+   position: absolute;
+   top: 8px;
+   left: -4px;
+   width: 30px;
+   height: 6px;
+   background-color: #fff;
+   border-radius: 3px;
+}
+
+.cw
+{
+   transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   /* IE 9 */
+    -webkit-transform: rotate(45deg);
+   /* Safari and Chrome */
+    -o-transform: rotate(45deg);
+   /* Opera */
+    -moz-transform: rotate(45deg);
+/* Firefox */}
+
+.ccw
+{
+   transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+   /* Safari and Chrome */
+    -o-transform: rotate(-45deg);
+   /* Opera */
+    -moz-transform: rotate(-45deg);
+/* Firefox */}
+
+.close-alt, .arrow-right-alt, .arrow-left-alt 
+{
+   display: none;
+   color: #fff;
+   font-size: 2.5em;
+}
+
+.ie8 .close-alt, .ie8 .arrow-right-alt, .ie8 .arrow-left-alt {
+   display: block;
+}
+.ie8 .cw, .ie8 .ccw {
+   display: none;
+}
+
+.moodle-content-layout .moodle-content
+{
+   margin:0 auto;
+}
+
+.moodle-content-layout .moodle-sidebar1
+{
+   background: #A9BCC1;
+   background: transparent;
+   border:1px solid #A9BCC1;
+   border-top:none;
+   border-bottom:none;
+   margin:0 auto;
+   width: 225px;
+}
+
+.moodle-content-layout .moodle-sidebar2
+{
+   background: #A9BCC1;
+   background: transparent;
+   margin:0 auto;
+   width: 225px;
+}
+
+
+
+html {
+    background-color:transparent;
+}
+
+.block {
+    border: 0px solid;
+    margin-bottom: 0px;
+}
+.jsenabled .block_navigation .block_tree .tree_item.emptybranch {
+	background-image:none;
+}
+.jsenabled.dir-rtl .block_navigation .block_tree .tree_item.emptybranch {
+	background-image:none;
+}
+.jsenabled .block_settings .block_tree .tree_item.emptybranch {
+	background-image:none;
+}
+.jsenabled.dir-rtl .block_settings .block_tree .tree_item.emptybranch {
+	background-image:none;
+}
+.hidden .content{
+	display:none
+}
+
+/* contextual-links-wrapper  */
+div.contextual-links-wrapper {
+    display: none;
+    position: relative;
+    right: 5px;
+    top: 2px;
+    z-index: 999;
+}
+div.block_action img {
+    margin:0px;
+}
+div.block_action input,
+div.block_action img{
+    vertical-align:middle;
+}
+.contextual-links-region:hover .contextual-links-wrapper{
+    display: block;
+}
+
+.block ul li, 
+.block ul li:before, 
+ul.weeks>li:before, 
+ul.unlist>li:before,
+ul.section>li.activity:before
+ {
+    background-image: none;
+    content: normal;
+}
+.block ul li img{
+    margin: 0px;
+    border: 0;
+    padding: 0 2px;
+}
+.block_tree .content 
+{
+    padding: 0px;
+}
+
+.navbar .breadcrumb ul>li 
+{
+    background-image: none;
+    margin: 0px 0px 0px 5px;
+    padding-left: 15px;
+}
+.arrow
+{
+    position: relative;
+    display: none;
+}
+.questionbankwindow div.header
+div.quizpage .pagecontent
+{
+    background-color: initial;
+}
+/* Remove borders of icons and <a> images */
+a img,
+.left img,
+.right img,
+th.header img, 
+fieldset div img,
+span.editing_move img
+{
+    border: 0px !important;
+    margin: 0px !important;
+    padding: 0 2px !important;
+}
+.user-enroller-panel
+{
+    z-index: 1;
+}
+div.moodle-postcontent table.forumpost th,
+div.moodle-postcontent table.forumpost td,
+.generalbox
+{
+    border: 0;
+}
+div.moodle-postcontent table.forumpost
+{
+    margin: 15px 0;
+}
+
+
+/* Align icons for collapsed and hidden blocks */
+div.block_action input,
+div.block_action img
+{
+    vertical-align:middle;
+}
+/* Remain Add Activity Dialog always on Top  */
+.chooserdialogue
+{
+    z-index:300 !important;
+}
+
+#page-content, .pagelayout-report #page-content
+{
+    float:none;
+   
+   -webkit-background-origin: border !important;
+   -moz-background-origin: border !important;
+   background-origin: border-box !important;
+
+   display: block;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+   background: #FFFFFF;
+   margin:5px auto 0;
+   position:relative;
+   cursor:auto;
+   width: 90%;
+   min-width: 700px;
+   max-width: 1728px;
+   z-index: auto !important;
+
+}
+.option label.moodle-radiobutton.moodle-checked:after
+{
+    top:4px;
+}
+#page-content #region-main-box,
+#page-content #region-main-wrap
+{
+	float:none;
+}
+
+.quizattempt
+{
+    margin:8px;
+}
+.qnbutton
+{
+    margin: 0.3em 0.3em 0.3em 0;
+}
+#admindeviceselector img, #adminthemeselector img
+{
+    width: 97%;
+}
+table#admindeviceselector, table#adminthemeselector
+{
+    width:100%;
+}
+/* Begin Additional CSS Styles */
+.moodle-blockheader .t, .moodle-vmenublockheader .t {white-space: nowrap;
+overflow: hidden;
+}
+/* End Additional CSS Styles */
+
+#page-mod-quiz-edit .questionbankwindow.block div.header{
+   background: #B8324D;
+   background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -moz-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -o-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: -ms-linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   -svg-background: linear-gradient(top, #AC2F48 0, #C83754 39%, #CA3F5B 50%, #C83754 50%, #A42D45 50%, #C43652 100%) no-repeat;
+   -webkit-border-radius:6px 6px 0 0;
+   -moz-border-radius:6px 6px 0 0;
+   border-radius:6px 6px 0 0;
+
+}

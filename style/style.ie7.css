@@ -1,0 +1,145 @@
+
+
+.clearfix {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+
+.moodle-textblock > div {
+   display: block;
+   line-height: normal;
+   zoom: 1;
+}
+
+.moodle-header
+{
+   z-index: 1;
+}
+
+.moodle-hmenu>li, .moodle-hmenu>li>a
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+ul.moodle-hmenu, ul.moodle-hmenu ul {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+ul.moodle-hmenu>li:first-child {
+   padding-right:11px;
+}
+ul.moodle-hmenu>li{
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('span'),firstChild).className='moodle-hmenu-separator');
+}
+ul.moodle-hmenu>li>span.moodle-hmenu-separator
+{
+   position:absolute;
+   display: block;
+   top:0;
+   left:  -11px;
+   width: 11px;
+   height: 51px;
+   background: url('[[pix:theme|menuseparator]]') center center no-repeat;
+}
+ul.moodle-hmenu>li:first-child>span.moodle-hmenu-separator
+{
+   display:none;
+}
+
+ul.moodle-hmenu ul, .desktop-nav ul.moodle-hmenu>li.ext:hover>a{
+   background-color: rgba(66, 86, 92, 0.9) !important;
+}
+
+.moodle-content-layout, .moodle-content-layout-row, .moodle-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.moodle-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+
+input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+* html input[type="text"]
+{
+   margin :0;
+}
+
+form.moodle-search>input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+form.moodle-search div>input[type="text"]
+{
+   width: 100%;
+}
+
+* html form.moodle-search>input[type="text"] 
+{
+   margin :0;
+}
+
+.moodle-postmetadataheader{
+   zoom:1;
+}
+
+.moodle-postheadericons span{
+   zoom: 1;
+}
+.moodle-postcontent {
+   height: 1%;
+}
+
+.moodle-postmetadatafooter{
+   zoom:1;
+}
+
+.moodle-postfootericons span{
+   zoom: 1;
+}
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+   display: block !important;
+}
+.cw, .ccw {
+   display: none !important;
+}
+
+.moodle-sidebar2 
+{
+   width: auto;
+   float:none;
+}
+
+.moodle-sidebar1
+{
+   background: none !important;
+   border: none !important;
+   zoom:expression(runtimeStyle.zoom=1, parentNode.parentNode.insertBefore(document.createElement('div'),parentNode.parentNode.firstChild).className='moodle-sidebar1-bg' + (className.indexOf('moodle-sidebar1-fix') == -1 ? '' : ' moodle-sidebar1-bg-fix' ));
+}
+
+.moodle-sidebar1-bg 
+{
+   border:1px solid #A9BCC1;
+   border-top:none;
+   border-bottom:none;
+   position:absolute;
+   z-index:-2;
+   direction: ltr;
+   right:  225px;
+   bottom:0;
+   top:0;
+   width: 225px;
+   overflow:hidden;
+   display:block;
+}
+
